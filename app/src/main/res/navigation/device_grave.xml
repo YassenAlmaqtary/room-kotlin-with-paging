@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/device_grave"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.example.paging_datas.HomeScreen"
+        android:label="fragment_devise_forme"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/homeScreen_to_formDeviceFragment"
+            app:destination="@id/formDeviceFragment"
+            app:popUpTo="@id/action_homeScreen_to_showDeviceFragment"
+            />
+        <action
+            android:id="@+id/action_homeScreen_to_showDeviceFragment"
+            app:destination="@id/showDeviceFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/formDeviceFragment"
+        android:name="com.example.paging_datas.FormDeviceFragment"
+        android:label="fragment_form_device"
+        tools:layout="@layout/fragment_form_device" />
+    <fragment
+        android:id="@+id/showDeviceFragment"
+        android:name="com.example.paging_datas.ShowDeviceFragment"
+        android:label="fragment_show_device"
+        tools:layout="@layout/fragment_show_device" />
+</navigation>
