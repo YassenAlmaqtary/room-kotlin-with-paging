@@ -9,7 +9,7 @@ import kotlinx.android.parcel.Parcelize
     @ColumnInfo(name = "dives_name")
     var name: String?=null,
     @ColumnInfo(name = "device_number")
-    var number: String?=null,
+    var number: Int?=null
 
     ) {
     @PrimaryKey(autoGenerate = true)

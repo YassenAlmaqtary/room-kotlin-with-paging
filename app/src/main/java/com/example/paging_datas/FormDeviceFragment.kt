@@ -8,14 +8,14 @@ import android.text.TextWatcher
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import com.example.paging_datas.dailog.CancelDailolg
 import com.example.paging_datas.databinding.FragmentFormDeviceBinding
 import com.example.paging_datas.room_data.model.Device
 import com.example.paging_datas.room_data.view.DeviceView
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_form_device.view.*
+
 @AndroidEntryPoint
 class FormDeviceFragment : Fragment(R.layout.fragment_form_device) {
     private lateinit var binding: FragmentFormDeviceBinding
@@ -29,21 +29,18 @@ class FormDeviceFragment : Fragment(R.layout.fragment_form_device) {
                 setOnClickListener {
                     if (isValidate()) {
                         var name: String = binding.fromName.text.toString().trim()
-                        var number: String = binding.fromNumber.text.toString().trim()
+                        var number: Int = binding.fromNumber.text.toString().trim().toInt()
                             devicView.insert(Device(name, number))
-                        Snackbar.make(this,"تم الاضافة بنجاح",Snackbar.LENGTH_SHORT).show()
-                        binding.fromName.text?.clear()
-                        binding.fromNumber.text?.clear()
-                        NavController(requireContext())?.popBackStack()
+                         Snackbar.make(this,R.string.title_snake_sucses,Snackbar.LENGTH_SHORT).show()
+                        findNavController().navigate(R.id.showDeviceFragment)
 
                     }
 
                 }
             }
           clear.apply {
-
               setOnClickListener {
-                  CancelDailolg(binding.fromName, binding.fromNumber).show(childFragmentManager,CancelDailolg.TAG)
+                  CancelDailolg().show(childFragmentManager,CancelDailolg.TAG)
 
               }
           }
@@ -54,7 +51,7 @@ class FormDeviceFragment : Fragment(R.layout.fragment_form_device) {
     private fun vidideName(): Boolean {
 
         if (binding.fromName.text.toString().trim().isEmpty()) {
-            binding.laAddDevice.error = "الحقل مطلوب!"
+            binding.laAddDevice.error = resources.getString(R.string.field_required)
             binding.fromName.requestFocus()
             return false
         } else {
@@ -67,7 +64,7 @@ class FormDeviceFragment : Fragment(R.layout.fragment_form_device) {
     private fun vididenumber(): Boolean {
 
         if (binding.fromNumber.text.toString().trim().isEmpty()) {
-            binding.laAddDevice.error = "الحقل مطلوب !"
+            binding.laAddDevice.error =resources.getString(R.string.field_required)
             binding.fromNumber.requestFocus()
             return false
 

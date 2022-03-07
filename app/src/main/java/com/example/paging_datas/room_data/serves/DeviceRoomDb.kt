@@ -6,7 +6,7 @@ import com.example.paging_datas.room_data.doc.DeviceDoc
 import com.example.paging_datas.room_data.model.Device
 
 
-@Database(entities = arrayOf(Device::class),version = 1,exportSchema = false)
+@Database(entities = arrayOf(Device::class),version =2,exportSchema = false)
 abstract class DeviceRoomDb: RoomDatabase() {
     abstract fun deviceDoc(): DeviceDoc
 

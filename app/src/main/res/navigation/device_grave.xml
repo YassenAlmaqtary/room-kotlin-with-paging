@@ -13,7 +13,6 @@
         <action
             android:id="@+id/homeScreen_to_formDeviceFragment"
             app:destination="@id/formDeviceFragment"
-            app:popUpTo="@id/action_homeScreen_to_showDeviceFragment"
             />
         <action
             android:id="@+id/action_homeScreen_to_showDeviceFragment"
@@ -27,7 +26,11 @@
         android:id="@+id/formDeviceFragment"
         android:name="com.example.paging_datas.FormDeviceFragment"
         android:label="fragment_form_device"
-        tools:layout="@layout/fragment_form_device" />
+        tools:layout="@layout/fragment_form_device" >
+        <action
+            android:id="@+id/action_formDeviceFragment_to_showDeviceFragment"
+            app:destination="@id/showDeviceFragment" />
+    </fragment>
     <fragment
         android:id="@+id/showDeviceFragment"
         android:name="com.example.paging_datas.ShowDeviceFragment"
