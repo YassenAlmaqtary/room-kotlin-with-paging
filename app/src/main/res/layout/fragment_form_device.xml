@@ -28,7 +28,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             >
             <com.google.android.material.textfield.TextInputEditText
@@ -63,31 +62,26 @@
                 android:maxLength="9"
                 />
         </com.google.android.material.textfield.TextInputLayout>
-         <Button
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="حفظ"
-             app:layout_constraintTop_toBottomOf="@+id/la_add_number"
-             app:layout_constraintStart_toStartOf="parent"
-             app:layout_constraintBottom_toBottomOf="parent"
-             app:layout_constraintEnd_toStartOf="@+id/clear"
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            app:layout_constraintTop_toBottomOf="@+id/la_add_number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/clear"
 
-             android:id="@+id/save"/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/clear"
-                android:text="الغاء"
-                android:backgroundTint="#DDF60909"
-                app:layout_constraintTop_toBottomOf="@+id/la_add_number"
-                app:layout_constraintStart_toEndOf="@+id/save"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
-
-
-
-
-
+            android:id="@+id/save"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/clear"
+            android:text="@string/cansel"
+            android:backgroundTint="#DDF60909"
+            app:layout_constraintTop_toBottomOf="@+id/la_add_number"
+            app:layout_constraintStart_toEndOf="@+id/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
