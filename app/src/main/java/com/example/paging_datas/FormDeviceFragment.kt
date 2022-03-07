@@ -14,14 +14,12 @@ import com.example.paging_datas.databinding.FragmentFormDeviceBinding
 import com.example.paging_datas.room_data.model.Device
 import com.example.paging_datas.room_data.view.DeviceView
 import com.google.android.material.snackbar.Snackbar
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_form_device.view.*
-
-
+@AndroidEntryPoint
 class FormDeviceFragment : Fragment(R.layout.fragment_form_device) {
     private lateinit var binding: FragmentFormDeviceBinding
-
     private val devicView: DeviceView by activityViewModels()
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentFormDeviceBinding.bind(view)

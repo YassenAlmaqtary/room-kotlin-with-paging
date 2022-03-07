@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Taif/AndroidStudioProjects/navtion_totrual/room-kotlin-with-paging/app/src/main/res/layout/items_devic_list.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/Taif/AndroidStudioProjects/paging_datas/app/src/main/res/drawable/card_shep.xml" value="0.14270833333333333" />
         <entry key="..\:/Users/Taif/AndroidStudioProjects/paging_datas/app/src/main/res/layout/activity_main.xml" value="0.11578947368421053" />
         <entry key="..\:/Users/Taif/AndroidStudioProjects/paging_datas/app/src/main/res/layout/fragment_devise_forme.xml" value="0.23157894736842105" />
@@ -10,6 +11,8 @@
         <entry key="..\:/Users/Taif/AndroidStudioProjects/paging_datas/app/src/main/res/layout/fragment_home_screen.xml" value="0.2" />
         <entry key="..\:/Users/Taif/AndroidStudioProjects/paging_datas/app/src/main/res/layout/fragment_show_device.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Taif/AndroidStudioProjects/paging_datas/app/src/main/res/layout/items_devic_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Taif/AndroidStudioProjects/room-kotlin-with-paging/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.2703125" />
+        <entry key="..\:/Users/Taif/AndroidStudioProjects/room-kotlin-with-paging/app/src/main/res/menu/main_minue.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

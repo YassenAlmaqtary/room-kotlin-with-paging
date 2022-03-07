@@ -1,11 +1,24 @@
 <resources>
     <string name="app_name">paging_datas</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="add_device">اضافة جهاز</string>
+    <string name="add_device">add device</string>
+    <string name="showDevice">show device</string>
+    <string name="add_number">add_number device</string>
+    <string name="save">save</string>
+    <string name="cansel">cansel</string>
+    <string name="title_home">home</string>
+    <string name="title_snake_sucses">succsses Add</string>
+    <string name="field_required">field is required</string>
 
-    <string name="add_number">اضافة رقم الجهاز</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- TODO: Remove or change this placeholder text -->
+
+    <string-array name="filter_device">
+        <item>all</item>
+        <item>name</item>
+        <item>number</item>
+    </string-array>
+
+
 </resources>

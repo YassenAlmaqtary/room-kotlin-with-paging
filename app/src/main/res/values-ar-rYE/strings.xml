@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">paging_datas</string>
+    <string name="add_device">اضافة جهاز</string>
+    <string name="showDevice">عرض الجهاز</string>
+    <string name="add_number">اضافة رقم الجهاز</string>
+    <string name="save">حفظ</string>
+    <string name="cansel">الغاء</string>
+    <string name="title_home">الرئيسية</string>
+    <string name="title_snake_sucses">تم الاضافة بنجاح</string>
+    <string name="field_required">الحقل مطلوب</string>
+
+    ////////////////
+    <string-array name="filter_device">
+        <item>الكل</item>
+        <item>الاسم</item>
+        <item>الرقم</item>
+    </string-array>
+
+</resources>
+
+

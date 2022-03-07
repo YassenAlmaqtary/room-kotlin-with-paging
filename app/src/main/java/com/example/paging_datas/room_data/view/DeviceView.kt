@@ -2,10 +2,11 @@ package com.example.paging_datas.room_data.view
 import androidx.lifecycle.*
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
-import androidx.paging.PagingSource
+import androidx.paging.PagingData
 import com.example.paging_datas.room_data.model.Device
 import com.example.paging_datas.room_data.rebostory.DeviceRebstory
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -14,6 +15,8 @@ import javax.inject.Inject
 class DeviceView
     @Inject
   constructor (private val rebstory: DeviceRebstory): ViewModel() {
+
+
 //getallDevice
   //val allDevice:LiveData<List<Device>> =rebstory.allDevice.asLiveData()
 
@@ -23,11 +26,34 @@ class DeviceView
  }
 
     val items=Pager(PagingConfig(
-        pageSize =1,
-        enablePlaceholders = true,
+        pageSize =50,
     )){
      rebstory.allDevice
     }.flow
+
+   // serach
+    fun itemsSearchName(name:String): Flow<PagingData<Device>> = Pager(PagingConfig(
+           pageSize =50,
+       )){
+           rebstory.allDeviceWitheName(name=name)
+       }.flow
+
+   //fillter
+   fun filtterdeviceName(): Flow<PagingData<Device>> = Pager(PagingConfig(
+       pageSize =50,
+   )){
+       rebstory.fillterDeviceName()
+   }.flow
+
+    fun fillterDeviceNumber(): Flow<PagingData<Device>> = Pager(PagingConfig(
+       pageSize =50,
+   )){
+       rebstory.fillterDeviceNumber()
+   }.flow
+
+
+
+
 
 
 }
