@@ -29,7 +29,10 @@
         tools:layout="@layout/fragment_form_device" >
         <action
             android:id="@+id/action_formDeviceFragment_to_showDeviceFragment"
-            app:destination="@id/showDeviceFragment" />
+            app:destination="@id/showDeviceFragment"
+            app:popUpTo="@id/showDeviceFragment"
+            app:popUpToInclusive="true"
+            />
     </fragment>
     <fragment
         android:id="@+id/showDeviceFragment"

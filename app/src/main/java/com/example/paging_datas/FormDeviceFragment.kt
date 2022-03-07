@@ -33,7 +33,6 @@ class FormDeviceFragment : Fragment(R.layout.fragment_form_device) {
                             devicView.insert(Device(name, number))
                          Snackbar.make(this,R.string.title_snake_sucses,Snackbar.LENGTH_SHORT).show()
                         findNavController().navigate(R.id.showDeviceFragment)
-
                     }
 
                 }
@@ -110,6 +109,7 @@ class FormDeviceFragment : Fragment(R.layout.fragment_form_device) {
 
         }
     }
+
 
 }
 
