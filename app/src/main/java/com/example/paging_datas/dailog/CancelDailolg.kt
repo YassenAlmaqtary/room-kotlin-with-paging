@@ -14,8 +14,10 @@ class CancelDailolg: DialogFragment() {
     }
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog=AlertDialog.Builder(requireContext()).setMessage("تمكين الالغاء")
-        .setPositiveButton("الغاء"){ _,_ ->
+        .setPositiveButton("تائكيد"){ _,_ ->
             findNavController().popBackStack()
+        }
+        .setNegativeButton("الغاء"){_,_ ->
         }
         .create()
 

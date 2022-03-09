@@ -4,11 +4,13 @@
     <string name="add_device">add device</string>
     <string name="showDevice">show device</string>
     <string name="add_number">add_number device</string>
+    <string name="add_date">add date</string>
     <string name="save">save</string>
     <string name="cansel">cansel</string>
     <string name="title_home">home</string>
     <string name="title_snake_sucses">succsses Add</string>
     <string name="field_required">field is required</string>
+    <string name="Select_date">Select date</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

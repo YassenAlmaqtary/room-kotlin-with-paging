@@ -16,6 +16,8 @@
         <item>الاسم</item>
         <item>الرقم</item>
     </string-array>
+    <string name="add_date">اضافة التاريخ</string>
+    <string name="Select_date">اختر التاريخ</string>
 
 </resources>
 

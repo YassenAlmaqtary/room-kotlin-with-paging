@@ -11,6 +11,7 @@ import android.widget.SearchView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.paging_datas.databinding.FragmentShowDeviceBinding
 import com.example.paging_datas.room_data.view.DeviceView
@@ -48,7 +49,6 @@ class ShowDeviceFragment() : Fragment(R.layout.fragment_show_device),
             ).also { adabter ->
                 adabter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
                 Spinner.adapter = adabter
-
             }
 
             Spinner.onItemSelectedListener = this@ShowDeviceFragment
@@ -89,6 +89,7 @@ class ShowDeviceFragment() : Fragment(R.layout.fragment_show_device),
         super.onDestroy()
         (activity as AppCompatActivity?)!!.supportActionBar?.title =
             resources.getString(R.string.title_home)
+        findNavController().popBackStack(R.id.formDeviceFragment,true)
     }
 
     fun getAllDevice() {
