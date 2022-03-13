@@ -17,7 +17,7 @@
 
 
     <style name="textcostom">
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">16dp</item>
         <item name="android:textColor">@color/blue</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAlignment">center</item>

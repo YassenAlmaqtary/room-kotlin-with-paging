@@ -49,8 +49,23 @@
                 android:layout_height="wrap_content"
                 android:text="@{deviceItem.number.toString()}"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/imageClear"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="16dp"
+                />
+
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:id="@+id/imageClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_more"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginEnd="20dp"
+                />
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
