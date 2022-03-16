@@ -5,15 +5,14 @@ import android.view.Menu
 import android.view.MenuInflater
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.SearchView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.paging_datas.databinding.FragmentShowDeviceBinding
+import com.example.paging_datas.room_data.model.Device
 import com.example.paging_datas.room_data.view.DeviceView
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
@@ -40,6 +39,12 @@ class ShowDeviceFragment() : Fragment(R.layout.fragment_show_device),
             recyler.apply {
                 layoutManager = LinearLayoutManager(requireActivity().applicationContext)
                 setHasFixedSize(true)
+                myListAdabter.setOnClicLisner(object:ListAdabter.OnClikLisener{
+                    override fun onIemClick(device: Device?, image: ImageView) {
+                      Toast.makeText(activity,device!!.name,Toast.LENGTH_LONG).show()
+
+                    }
+                })
                 adapter = myListAdabter
             }
             //spinner
